@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.min.css">
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./img/1.jpg" alt=""></li>
+            <!-- <li><img src="./img/2.jpg" alt=""></li>
+            <li><img src="./img/3.jpg" alt=""></li>
+            <li><img src="./img/4.jpg" alt=""></li> -->
+        </ul>
+    </div>
+    <script src="tap.js"></script>
+    <script>
+        var data = ['./img/1.jpg', './img/2.jpg', './img/3.jpg', './img/4.jpg'],
+            ul = document.querySelector('ul'),
+            index = 0,
+            length = data.length;
+        myTouch.swiper(ul, 'left', function() {
+            index++;
+            if (index >= length) {
+                index = 0;
+            }
+
+            ul.querySelector('li').querySelector('img').src = data[index]
+        })
+        myTouch.swiper(ul, 'right', function() {
+            index--;
+            if (index < 0) {
+                index = length - 1;
+                console.log(index)
+            }
+            1
+            console.log(data[index])
+            ul.querySelector('li').querySelector('img').src = data[index]
+        })
+    </script>
+</body>
+
+</html>
